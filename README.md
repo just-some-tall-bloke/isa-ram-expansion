@@ -7,11 +7,11 @@ This is my simple 8-bit ISA RAM expansion board. I created it to allow me to add
 - It is simple and easy to build.
 - PCB is small so it is inexpensive to have produced.
 - No drivers needed. (For conventional memory support)
-- Desienged with KiCad, files available here. Free to modify.
+- Desinged with KiCad, files available here. Free to modify.
 - This card only supports conventional memory, no EMS. Extra RAM can be mapped into the high memory space (above 640k) allowing for UMB on XT machines.
 - Required parts to build are marked on the PCB silk screen and on the schematic. (Sorry no BOM)
 
-To access UBM, there are various DOS utilities to do this. I have a set of them uploaded in this REPO:
+To access UMB, there are various DOS utilities to do this. I have a set of them uploaded in this repo:
 https://github.com/misterblack1/tandy1000ex-hx-ram/tree/master/umb_dos_utils
 
 This card has 512k of 8-bit RAM on it. Therefore, you can map that 512k into the 8088 address space in 128k chunks. (Four chunks.) Use the DIP switches to select which banks are mapped by disabling the extra RAM on the ISA card. Even though you can map the 512k into all of the 1024k of address space in the 8088, please remember the mapping repeats once.
@@ -31,7 +31,7 @@ So when configuring the card to map the 512k RAM into the system memory, you can
 
 Example:
 
-PC has 256k of RAM installed on the motherboard. This motherboard RAM wil exist from 0k to 256k. 
+PC has 256k of RAM installed on the motherboard. This motherboard RAM will exist from 0k to 256k. 
 You want this ISA card to bring the system to 640k conventional. 
 
 Memory map would look like this:
